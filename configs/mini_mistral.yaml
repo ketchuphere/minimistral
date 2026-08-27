@@ -1,0 +1,32 @@
+model:
+  vocab_size: 50257
+  hidden_size: 256
+  num_layers: 4
+  num_heads: 8
+  num_kv_heads: 2
+  head_dim: 32
+  ffn_hidden: 512
+  max_seq_len: 512
+  window_size: 64
+  dropout: 0.1
+  rope_theta: 10000.0
+  use_gqa: true
+  use_sliding_window: true
+  use_rope: true
+  use_swiglu: true
+
+training:
+  batch_size: 16
+  seq_len: 128
+  learning_rate: 3.0e-4
+  max_steps: 1000
+  eval_interval: 100
+  eval_steps: 20
+  weight_decay: 0.01
+  grad_clip_norm: 1.0
+  seed: 1337
+  checkpoint_path: checkpoints/mistral_mini.pt
+  resume_from: null
+  data_url: "https://raw.githubusercontent.com/karpathy/char-rnn/master/data/tinyshakespeare/input.txt"
+  data_path: data/shakespeare.txt
+  train_val_split: 0.9
