@@ -249,8 +249,8 @@ MiniMistral/
 ## 16. Installation
 
 ```bash
-git clone <your-repo-url> MiniMistral
-cd MiniMistral
+git clone https://github.com/ketchuphere/minimistral
+cd minimistral
 python -m venv venv && source venv/bin/activate   # optional but recommended
 pip install -r requirements.txt
 ```
