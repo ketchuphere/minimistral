@@ -1,0 +1,10 @@
+{
+  "_source": "notebooks/mistralfromscratch.ipynb — original 1000-step training run, verbatim from notebook cell outputs. This is the primary, full-length training result for MiniMistral.",
+  "max_steps": 1000,
+  "eval_interval": 100,
+  "eval_steps": [0, 100, 200, 300, 400, 500, 600, 700, 800, 900],
+  "train_eval_losses": [10.8911, 5.9863, 5.1873, 4.7925, 4.5629, 4.3613, 4.3678, 4.2064, 4.1967, 4.1606],
+  "val_eval_losses": [10.8817, 6.0589, 5.4338, 5.1707, 5.0374, 4.8609, 4.8406, 4.7823, 4.8366, 4.7584],
+  "final_reported_val_loss": 4.7584,
+  "notes": "Validation loss dropped from ~10.88 (random-init, ln(50257)=10.82 baseline) to ~4.76 over 1000 steps on TinyShakespeare. See results/training_metrics_smoke_test.json for a newly-run, shorter verification pass executed in this repository's CI-style environment (CPU, 60 steps) confirming the refactored pipeline reproduces the same loss trajectory shape."
+}

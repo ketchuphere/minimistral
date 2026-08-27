@@ -1,0 +1,15 @@
+{
+  "_source": "Newly measured with scripts/evaluate.py against the 60-step smoke-test checkpoint in this environment. Loss/perplexity are higher than the notebook final result because this checkpoint was trained for only 60 of the notebook's 1000 steps (CPU-only sandboxed environment time constraints). Run scripts/train.py for the full 1000 steps, then scripts/evaluate.py, to reproduce the notebook's ~4.76 validation loss / ~116.7 perplexity.",
+  "checkpoint": "checkpoints/mistral_mini.pt",
+  "num_batches": 15,
+  "batch_size": 16,
+  "seq_len": 128,
+  "train": {
+    "loss": 7.581264940897624,
+    "perplexity": 1961.1080829076566
+  },
+  "validation": {
+    "loss": 7.60363442103068,
+    "perplexity": 2005.4713933921837
+  }
+}

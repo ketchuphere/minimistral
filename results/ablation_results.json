@@ -1,0 +1,20 @@
+{
+  "_status": "framework_implemented_not_fully_executed",
+  "_explanation": "The ablation framework (scripts/benchmark_ablation.py) trains and evaluates 5 variants: full MiniMistral, without GQA, without Sliding Window Attention, without RoPE, and without SwiGLU. It was functionally verified in this environment (each variant trains, evaluates, and reports parameter count, validation loss, perplexity, and generation latency correctly) using a short run. Running the full study at a meaningful step count (matching the notebook's 1000-step budget, x5 variants) requires roughly 3-4 hours on this sandboxed CPU-only environment and was not completed here to avoid fabricating results from a truncated run. No ablation numbers are reported below to avoid implying they reflect a converged comparison.",
+  "how_to_run": "python scripts/benchmark_ablation.py --config configs/mini_mistral.yaml --max_steps 1000",
+  "functional_verification": {
+    "variant_tested": "without_rope",
+    "steps": 5,
+    "note": "5-step sanity run only, confirming the code path executes correctly end-to-end (train -> evaluate -> generate). Not a converged result.",
+    "parameter_count": 15096320,
+    "val_loss_after_5_steps": 10.191356341044107,
+    "val_perplexity_after_5_steps": 26671.646226366036
+  },
+  "variants": {
+    "full_mini_mistral": "not run to convergence in this environment",
+    "without_gqa": "not run to convergence in this environment",
+    "without_sliding_window": "not run to convergence in this environment",
+    "without_rope": "not run to convergence in this environment",
+    "without_swiglu": "not run to convergence in this environment"
+  }
+}

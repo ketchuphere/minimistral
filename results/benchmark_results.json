@@ -1,0 +1,18 @@
+{
+  "_source": "Newly measured with scripts/benchmark.py on the 60-step smoke-test checkpoint, CPU, in this sandboxed environment. Latency/throughput numbers reflect this container's CPU, not a representative GPU benchmark.",
+  "device": "cpu",
+  "parameter_count": 15096320,
+  "model_size_mb": 57.588,
+  "generation_runs": [
+    {
+      "max_new_tokens": 10,
+      "latency_seconds": 0.1938,
+      "tokens_per_second": 51.6
+    },
+    {
+      "max_new_tokens": 20,
+      "latency_seconds": 0.3863,
+      "tokens_per_second": 51.77
+    }
+  ]
+}
